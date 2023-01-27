@@ -1,0 +1,21 @@
+.root{
+    -fx-background-color: rgb(999, 999, 999) ;
+}
+.my-text{
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: black;
+    -fx-font-size: 14;
+    -fx-border-color: #68BCE0;
+    -fx-background-color: rgb(228, 230, 250);
+}
+.button{
+    -fx-text-fill:white;
+    -fx-background-color: linear-gradient(to bottom right, #915ECC, #68BCE0);
+    -fx-background-radius: 0;
+}
+.text-area .content{
+    -fx-background-color: rgb(228, 230, 250);
+}
+
+
+

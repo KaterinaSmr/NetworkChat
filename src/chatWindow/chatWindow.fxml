@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" prefHeight="400.0" prefWidth="300.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chatWindow.Controller">
+    <top>
+        <GridPane fx:id="topPane" hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="114.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="114" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="73.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TextField fx:id="tfLogin" prefWidth="130.0" styleClass="my-text" />
+                <PasswordField fx:id="passwordField" prefWidth="130.0" styleClass="my-text" GridPane.columnIndex="1" />
+                <Button fx:id="buttonLogin" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onClickButtonLogin" prefHeight="28.0" prefWidth="73.0" text="Login" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+            </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+        </GridPane>
+    </top>
+   <bottom>
+      <BorderPane fx:id="bottomPane" prefHeight="4.0" prefWidth="300.0" visible="false" BorderPane.alignment="CENTER">
+         <center>
+            <TextField fx:id="textField" prefHeight="30.0" styleClass="my-text" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets right="5.0" />
+               </BorderPane.margin></TextField>
+         </center>
+         <right>
+            <Button fx:id="buttonSend" mnemonicParsing="false" onAction="#onClickButtonSend" prefHeight="28.0" prefWidth="73.0" text="Send" BorderPane.alignment="CENTER" />
+         </right>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </BorderPane>
+   </bottom>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <center>
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="300.0" prefWidth="240.0" BorderPane.alignment="CENTER">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TextArea fx:id="textArea" editable="false" prefHeight="300.0" prefWidth="240.0" styleClass="my-text" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </content>
+         <BorderPane.margin>
+            <Insets right="5.0" />
+         </BorderPane.margin>
+      </ScrollPane>
+   </center>
+   <right>
+      <ScrollPane fx:id="rightPane" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="90.0" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane prefHeight="200.0" prefWidth="90.0">
+               <children>
+                  <TextArea fx:id="userListTextArea" editable="false" prefHeight="200.0" prefWidth="90.0" styleClass="my-text" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </right>
+</BorderPane>
