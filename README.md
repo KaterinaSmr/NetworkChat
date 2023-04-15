@@ -10,5 +10,3 @@ Simple multi-user app for network chatting
 1) Run Main in server
 2) Run Main in chatWindow (multiple instances allowed)
 
-Видео-демострация проекта
-https://youtu.be/giWQVzEUiLc
